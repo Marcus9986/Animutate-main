@@ -9,7 +9,7 @@ public class CameraController : MonoBehaviour
     
 	public Vector2 offset;
 	public Vector2 offset2;
-	public float smoothSpeed = 0.01f;
+	private float smoothSpeed = 5.0f;
 
 	// Start is called before the first frame update
 	void Start()
@@ -21,7 +21,8 @@ public class CameraController : MonoBehaviour
 	void LateUpdate()
 	{
 		var targetVelocity = targetRb.velocity;
-		offset = new Vector2(targetVelocity.x * 0.2f + offset2.x, targetVelocity.y * 0.1f + offset2.y);
+		// offset = new Vector2(targetVelocity.x * 0.2f + offset2.x, targetVelocity.y * 0.1f + offset2.y); //Doesn't work properly
+		offset = new Vector2(0, 0);
 		SmoothFollow();
 	}
 
