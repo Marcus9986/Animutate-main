@@ -9,7 +9,7 @@ public class CameraController : MonoBehaviour
     
 	public Vector2 offset;
 	public Vector2 offset2;
-	private float smoothSpeed = 5.0f;
+	private float smoothSpeed = 0.20f;
 
 	// Start is called before the first frame update
 	void Start()

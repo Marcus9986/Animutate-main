@@ -47,6 +47,7 @@ public class GravityShroom : MonoBehaviour
                 shroombody.size = new Vector2(1,1);
                 sprite.enabled = true;
                 gravity_power = false;
+                _powerUsed = false;
                 power_up_time = duration;
                 if (grav_on)
                 {
