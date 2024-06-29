@@ -7495,7 +7495,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876448417}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.9, y: -1.6, z: 0}
+  m_LocalPosition: {x: -13.7, y: -1.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -317795,6 +317795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1382849598}
   - component: {fileID: 1382849599}
+  - component: {fileID: 1382849600}
   m_Layer: 0
   m_Name: Music
   m_TagString: Untagged
@@ -317810,7 +317811,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382849597}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -14.91, y: -5.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -317837,10 +317838,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 80
+  MaxDistance: 88
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -317849,22 +317850,22 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.65213776
       inSlope: 0
       outSlope: 0
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      time: 0.9808655
+      value: 0.33847046
+      inSlope: -1.0188102
+      outSlope: -1.0188102
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0.12918663
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -317913,6 +317914,22 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1382849600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382849597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6919f4eb6201d4235bbd328b06951dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listenerTransform: {fileID: 578492764}
+  audioSource: {fileID: 1382849599}
+  minDist: 80
+  maxDist: 88
 --- !u!1001 &1394288430
 PrefabInstance:
   m_ObjectHideFlags: 0
