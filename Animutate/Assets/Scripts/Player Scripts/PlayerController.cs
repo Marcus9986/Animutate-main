@@ -63,12 +63,6 @@ public class PlayerController : MonoBehaviour
         {
             _coyoteTimeCounter -= Time.deltaTime;
         }
-
-        if (rp){
-            Debug.Log("rp is true");
-        } else {
-            Debug.Log("rp is false");
-        }
         
         // Jump Buffering
         
