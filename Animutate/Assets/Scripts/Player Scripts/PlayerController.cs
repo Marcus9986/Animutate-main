@@ -38,6 +38,7 @@ public class PlayerController : MonoBehaviour
         "Fish",
         "Spider"
     };
+    public bool rp;
 
     // Fundamental Methods
     private void Start()
@@ -61,6 +62,12 @@ public class PlayerController : MonoBehaviour
         else
         {
             _coyoteTimeCounter -= Time.deltaTime;
+        }
+
+        if (rp){
+            Debug.Log("rp is true");
+        } else {
+            Debug.Log("rp is false");
         }
         
         // Jump Buffering
@@ -158,4 +165,16 @@ public class PlayerController : MonoBehaviour
     {
         shouldRespawn = true;
     }
+
+    // private void OnTriggerEnter2D(Collider2D col){
+    //     if (col.CompareTag("rewind"))
+    //     {
+    //         rp = true;
+    //         Debug.Log("rewinding");
+    //     } else
+    //     {
+    //         rp = false;
+    //         Debug.Log("not rewinding");
+    //     }
+    // }
 }

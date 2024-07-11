@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEditor;
 
 public class RewindShroom : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class RewindShroom : MonoBehaviour
     public PlayerController script;
     private bool two_powerups;
     private Vector2 start_size;
+    public PauseMenu pm;
 
 
 
@@ -55,6 +57,7 @@ public class RewindShroom : MonoBehaviour
                 shroom.position = start_pos;
                 sprite.enabled = true;
                 rewind_power = false;
+                script.rp = false;
                 rewind_Light.position = start_pos;
                 power_up_time = duration;
                 shroombody.size = start_size;
@@ -78,11 +81,9 @@ public class RewindShroom : MonoBehaviour
                 light.intensity = 2.84f;
             }else if (0.2f < power_up_time && power_up_time < 0.4f ){
                 light.intensity = 1.0f;
-            }else if (0.0f < power_up_time && power_up_time < 0.2f ) {
-                light.intensity = 2.84f;
             }
 
-            if (duration - power_up_time > rewind){
+            if (duration - power_up_time > rewind && ! pm.gameIsPaused){
 
                 rewind_pos = myQueue.Dequeue();
             }
@@ -110,6 +111,7 @@ public class RewindShroom : MonoBehaviour
             rewind_Light.position = start_pos;
             sprite.enabled = true;
             rewind_power = false;
+            script.rp = false;
             power_up_time = duration;
             two_powerups = false;
             shroombody.size = start_size;
@@ -127,6 +129,7 @@ public class RewindShroom : MonoBehaviour
             sprite.enabled = false;
             shroombody.size = new Vector2(2,2);
             rewind_pos = player.position;
+            script.rp = true;
         } else if (col.CompareTag("PowerUp"))
         {
             two_powerups = true;

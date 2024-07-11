@@ -8,9 +8,11 @@ public class PauseMenu : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public static bool gameIsPaused = false;
+    public bool gameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject animals;
+    public GameObject rewind;
+    public PlayerController player;
 
     void Start()
     {
@@ -32,6 +34,14 @@ public class PauseMenu : MonoBehaviour
             }
         }
 
+        if (! gameIsPaused && player.rp == true){
+            rewind.SetActive(true);
+            Debug.Log("show rewind");
+        } else {
+            rewind.SetActive(false);
+            Debug.Log("hiding rewind f");
+        }
+
 
     }
 
@@ -40,6 +50,10 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("resuming");
         pauseMenuUI.SetActive(false);
         animals.SetActive(true);
+        if (player.rp == true){
+            rewind.SetActive(true);
+            Debug.Log("show rewind from pause");
+        }
         Time.timeScale = 1f;
         gameIsPaused = false;
     }
@@ -48,6 +62,8 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         animals.SetActive(false);
+        rewind.SetActive(false);
+        Debug.Log("hiding rewind from pause");
         Time.timeScale = 0f;
         gameIsPaused = true;
     }
