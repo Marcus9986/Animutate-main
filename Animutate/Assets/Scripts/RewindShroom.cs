@@ -24,6 +24,7 @@ public class RewindShroom : MonoBehaviour
     private bool two_powerups;
     private Vector2 start_size;
     public PauseMenu pm;
+    public GameObject rewindCam;
 
 
 
@@ -58,6 +59,7 @@ public class RewindShroom : MonoBehaviour
                 sprite.enabled = true;
                 rewind_power = false;
                 script.rp = false;
+                rewindCam.SetActive(false);
                 rewind_Light.position = start_pos;
                 power_up_time = duration;
                 shroombody.size = start_size;
@@ -112,6 +114,7 @@ public class RewindShroom : MonoBehaviour
             sprite.enabled = true;
             rewind_power = false;
             script.rp = false;
+            rewindCam.SetActive(false);
             power_up_time = duration;
             two_powerups = false;
             shroombody.size = start_size;
@@ -130,6 +133,7 @@ public class RewindShroom : MonoBehaviour
             shroombody.size = new Vector2(2,2);
             rewind_pos = player.position;
             script.rp = true;
+            rewindCam.SetActive(true);
         } else if (col.CompareTag("PowerUp"))
         {
             two_powerups = true;
