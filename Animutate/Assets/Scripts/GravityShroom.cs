@@ -99,7 +99,7 @@ public class GravityShroom : MonoBehaviour
                 playerbody.gravityScale = 3;
                 playerbody.velocity = new Vector2(0,0);
                 grav_on = false;
-                Debug.Log("1");
+                //Debug.Log("1");
             }
             else if (! grav_on && gravity_power)
             {
@@ -112,7 +112,7 @@ public class GravityShroom : MonoBehaviour
                 player.Translate(0,-1 + offset,0);
                 playerbody.velocity = new Vector2(0,0);
                 grav_on = true;
-                Debug.Log("2");
+                //Debug.Log("2");
             }
 
         }
@@ -145,7 +145,7 @@ public class GravityShroom : MonoBehaviour
                 player.Translate(0,1+offset,0);
                 playerbody.gravityScale = 3;
                 playerbody.velocity = new Vector2(0,0);
-                Debug.Log("3");
+                //Debug.Log("3");
             }
         _powerUsed = false;
         }
@@ -162,7 +162,7 @@ public class GravityShroom : MonoBehaviour
             light.enabled = true;
             sprite.enabled = false;
             _powerUsed = true;
-            Debug.Log("4");
+            //Debug.Log("4");
         } else if (col.CompareTag("PowerUp"))
         {
             if(gravity_power)
