@@ -222,6 +222,8 @@ GameObject:
   - component: {fileID: 45441404}
   - component: {fileID: 45441403}
   - component: {fileID: 45441402}
+  - component: {fileID: 45441407}
+  - component: {fileID: 45441406}
   m_Layer: 6
   m_Name: br 2
   m_TagString: Untagged
@@ -257,7 +259,7 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
@@ -1023,6 +1025,141 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!66 &45441406
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45441400}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 45441402}
+    m_ColliderPaths:
+    - - X: 6070294016
+        Y: 1100294144
+      - X: 5889705984
+        Y: 1100294144
+      - X: 5889705984
+        Y: 1079705856
+      - X: 6070294016
+        Y: 1079705856
+    - - X: 200294112
+        Y: 30294118
+      - X: 169705888
+        Y: 30294118
+      - X: 169705888
+        Y: 19705882
+      - X: 200294112
+        Y: 19705882
+    - - X: 60294116
+        Y: 9705882
+      - X: 70294120
+        Y: 9705882
+      - X: 70294120
+        Y: 20294118
+      - X: 39705884
+        Y: 20294118
+      - X: 39705884
+        Y: -294117
+      - X: 60294116
+        Y: -294117
+    - - X: 180294112
+        Y: -294117
+      - X: 190294112
+        Y: -294117
+      - X: 190294112
+        Y: 10294118
+      - X: 179705888
+        Y: 10294118
+      - X: 179705888
+        Y: 294117
+      - X: 149705888
+        Y: 294117
+      - X: 149705888
+        Y: -10294118
+      - X: 180294112
+        Y: -10294118
+    - - X: 80294112
+        Y: 294117
+      - X: 69705880
+        Y: 294117
+      - X: 69705880
+        Y: -10294118
+      - X: 80294112
+        Y: -10294118
+    - - X: 100294112
+        Y: -19705882
+      - X: 89705888
+        Y: -19705882
+      - X: 89705888
+        Y: -30294118
+      - X: 100294112
+        Y: -30294118
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 607.02936, y: 107.97059}
+      - {x: 607.02936, y: 110.02942}
+      - {x: 588.9706, y: 110.02939}
+      - {x: 588.97064, y: 107.97059}
+    - - {x: 20.029383, y: 1.9705882}
+      - {x: 20.029383, y: 3.0294118}
+      - {x: 16.970589, y: 3.0293825}
+      - {x: 16.970617, y: 1.9705882}
+    - - {x: 6.0293827, y: -0.0294117}
+      - {x: 6.029441, y: 0.9705882}
+      - {x: 7.0294123, y: 0.97061753}
+      - {x: 7.0293827, y: 2.0294118}
+      - {x: 3.9705884, y: 2.0293825}
+      - {x: 3.9706175, y: -0.0294117}
+    - - {x: 18.029383, y: -1.0294118}
+      - {x: 18.02944, y: -0.0294117}
+      - {x: 19.029411, y: -0.0293824}
+      - {x: 19.029383, y: 1.0294118}
+      - {x: 17.970589, y: 1.0293825}
+      - {x: 17.97056, y: 0.0294117}
+      - {x: 14.970589, y: 0.0293824}
+      - {x: 14.970618, y: -1.0294118}
+    - - {x: 8.029382, y: -1.0294118}
+      - {x: 8.029382, y: 0.0294117}
+      - {x: 6.970588, y: 0.0293824}
+      - {x: 6.970618, y: -1.0294118}
+    - - {x: 10.029382, y: -3.0294118}
+      - {x: 10.029382, y: -1.9705882}
+      - {x: 8.970589, y: -1.9706177}
+      - {x: 8.970618, y: -3.0294118}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
+--- !u!50 &45441407
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45441400}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &80378239
 GameObject:
   m_ObjectHideFlags: 0
@@ -4262,6 +4399,8 @@ GameObject:
   - component: {fileID: 510497667}
   - component: {fileID: 510497666}
   - component: {fileID: 510497665}
+  - component: {fileID: 510497670}
+  - component: {fileID: 510497669}
   m_Layer: 6
   m_Name: br 2 2
   m_TagString: Untagged
@@ -4296,7 +4435,7 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
@@ -4806,6 +4945,63 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!66 &510497669
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510497663}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 510497665}
+    m_ColliderPaths:
+    - - X: 6069705728
+        Y: 1079705856
+      - X: 6240294400
+        Y: 1079705856
+      - X: 6240294400
+        Y: 1100294144
+      - X: 6069705728
+        Y: 1100294144
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 624.0294, y: 107.97059}
+      - {x: 624.0294, y: 110.02942}
+      - {x: 606.9706, y: 110.02939}
+      - {x: 606.97064, y: 107.97059}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
+--- !u!50 &510497670
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510497663}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &519345576
 GameObject:
   m_ObjectHideFlags: 0
@@ -421659,6 +421855,8 @@ GameObject:
   - component: {fileID: 1567706583}
   - component: {fileID: 1567706582}
   - component: {fileID: 1567706581}
+  - component: {fileID: 1567706586}
+  - component: {fileID: 1567706585}
   m_Layer: 0
   m_Name: br 1
   m_TagString: Untagged
@@ -421694,7 +421892,7 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
@@ -422402,6 +422600,99 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!66 &1567706585
+CompositeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567706579}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_GeometryType: 0
+  m_GenerationType: 0
+  m_EdgeRadius: 0
+  m_ColliderPaths:
+  - m_Collider: {fileID: 1567706581}
+    m_ColliderPaths:
+    - - X: 4920294400
+        Y: 980294144
+      - X: 4899705856
+        Y: 980294144
+      - X: 4899705856
+        Y: 809705856
+      - X: 4920294400
+        Y: 809705856
+    - - X: 110294112
+        Y: 10294118
+      - X: 70294120
+        Y: 10294118
+      - X: 70294120
+        Y: 20294118
+      - X: 39705884
+        Y: 20294118
+      - X: 39705884
+        Y: 9705882
+      - X: 69705880
+        Y: 9705882
+      - X: 69705880
+        Y: -294117
+      - X: 110294112
+        Y: -294117
+    - - X: 130294112
+        Y: -19705882
+      - X: 89705888
+        Y: -19705882
+      - X: 89705888
+        Y: -30294118
+      - X: 130294112
+        Y: -30294118
+  m_CompositePaths:
+    m_Paths:
+    - - {x: 492.0294, y: 80.97059}
+      - {x: 492.0294, y: 98.02942}
+      - {x: 489.97058, y: 98.02938}
+      - {x: 489.97064, y: 80.97059}
+    - - {x: 11.029382, y: -0.0294117}
+      - {x: 11.029382, y: 1.0294118}
+      - {x: 7.0294123, y: 1.0294412}
+      - {x: 7.0293827, y: 2.0294118}
+      - {x: 3.9705884, y: 2.0293825}
+      - {x: 3.9706175, y: 0.9705882}
+      - {x: 6.970588, y: 0.9705588}
+      - {x: 6.970618, y: -0.0294117}
+    - - {x: 13.029382, y: -3.0294118}
+      - {x: 13.029382, y: -1.9705882}
+      - {x: 8.970589, y: -1.9706177}
+      - {x: 8.970618, y: -3.0294118}
+  m_VertexDistance: 0.0005
+  m_OffsetDistance: 0.00005
+--- !u!50 &1567706586
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1567706579}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &1583947020
 GameObject:
   m_ObjectHideFlags: 0
@@ -424546,7 +424837,7 @@ TilemapCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
   m_ExtrusionFactor: 0
@@ -440038,6 +440329,84 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4693511582167853341, guid: 758d82ed439f4d4459708b910ba1ede5, type: 3}
   m_PrefabInstance: {fileID: 906547295}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1999878738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1999878739}
+  - component: {fileID: 1999878741}
+  - component: {fileID: 1999878740}
+  m_Layer: 0
+  m_Name: A1 TELE
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1999878739
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999878738}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.8, y: -1.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2024610721}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1999878740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999878738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2de40a18628d134bba5a12a6a464219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script: {fileID: 876448423}
+  background: {fileID: 1487657890}
+  others:
+  - {fileID: 729770920}
+  - {fileID: 731456419}
+  - {fileID: 721570156}
+  isActive: 1
+--- !u!61 &1999878741
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999878738}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 35, y: 10}
+  m_EdgeRadius: 0
 --- !u!1 &2002868573
 GameObject:
   m_ObjectHideFlags: 0
@@ -440321,6 +440690,7 @@ Transform:
   - {fileID: 1705524571}
   - {fileID: 1086325606}
   - {fileID: 387811014}
+  - {fileID: 1999878739}
   m_Father: {fileID: 1264687411}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
