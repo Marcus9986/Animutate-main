@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Linq;
 // ReSharper disable MemberCanBePrivate.Global
 // ReSharper disable All
 
@@ -43,7 +44,9 @@ public class PlayerController : MonoBehaviour
     // Fundamental Methods
     private void Start()
     {
-        currAnimal = "Hare";
+        if (! _unlockedAnimals.Contains(currAnimal)){
+            currAnimal = "Hare";
+        }
         _animator = GetComponent<Animator>();
         _boxCollider = GetComponent<BoxCollider2D>();
         _groundLayer = LayerMask.GetMask("Ground");

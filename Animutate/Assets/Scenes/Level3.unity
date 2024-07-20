@@ -13606,6 +13606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9f2998b2b7e21947a1954134c5c5335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameIsPaused: 0
   pauseMenuUI: {fileID: 31546738}
   animals: {fileID: 528260334}
 --- !u!114 &236596666
@@ -17811,8 +17812,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shouldRespawn: 0
-  currAnimal: 
+  currAnimal: bing
   num_unlocked: 2
+  rp: 0
 --- !u!61 &735904082
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -18366,7 +18368,7 @@ MonoBehaviour:
   targetTransform: {fileID: 735904086}
   targetRb: {fileID: 735904085}
   offset: {x: 0, y: 1}
-  smoothSpeed: 0.01
+  offset2: {x: 0, y: 0}
 --- !u!1 &921982433
 GameObject:
   m_ObjectHideFlags: 0
