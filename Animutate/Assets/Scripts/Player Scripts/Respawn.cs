@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Respawn : MonoBehaviour
 {
-    private Vector3 _lastCheckpointPosition;
+    public Vector3 _lastCheckpointPosition;
     public PlayerController playerController;
     public bool unlocked_animal = false;
     private bool respawned;
@@ -11,7 +11,8 @@ public class Respawn : MonoBehaviour
 
     private void Start()
     {
-        _lastCheckpointPosition = new Vector3(0.0f, -1.5f, 0.0f);
+        if (_lastCheckpointPosition == new Vector3(0,0,0))
+            _lastCheckpointPosition = new Vector3(0.0f, -1.5f, 0.0f);
         playerbody = GetComponent<Rigidbody2D>();
     }
 

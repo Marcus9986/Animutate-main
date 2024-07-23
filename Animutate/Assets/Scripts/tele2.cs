@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class tele : MonoBehaviour
+public class tele2 : MonoBehaviour
 {
 
    [SerializeField] Collider2D player;
@@ -18,7 +18,7 @@ public class tele : MonoBehaviour
     {
         if (Input.GetKeyDown("6"))
         {
-            p.position = new Vector3(-10,-1,0);
+            p.position = new Vector3(9,34,0);
         }
         if (Input.GetKeyDown("7"))
         {

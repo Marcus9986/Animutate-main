@@ -55,6 +55,7 @@ public class RewindShroom : MonoBehaviour
             power_up_time -= Time.deltaTime;
             if (power_up_time < 0)
             {
+                power_used = false;
                 shroom.position = start_pos;
                 sprite.enabled = true;
                 rewind_power = false;
@@ -108,6 +109,7 @@ public class RewindShroom : MonoBehaviour
     {
         if (script.shouldRespawn || two_powerups)
         {
+            power_used = false;
             shroom.position = start_pos;
             shroombody.size = start_size;
             rewind_Light.position = start_pos;
@@ -134,6 +136,7 @@ public class RewindShroom : MonoBehaviour
             rewind_pos = player.position;
             script.rp = true;
             rewindCam.SetActive(true);
+            power_used = true;
         } else if (col.CompareTag("PowerUp"))
         {
             two_powerups = true;

@@ -444776,6 +444776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91ac3cf7d669ef548aa1349baf24d481, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _lastCheckpointPosition: {x: 567.5, y: 115.8, z: 0}
   playerController: {fileID: 1470173316}
   unlocked_animal: 0
 --- !u!114 &1470173312
