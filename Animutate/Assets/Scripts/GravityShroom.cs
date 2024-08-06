@@ -86,7 +86,7 @@ public class GravityShroom : MonoBehaviour
             }
         }
         
-        if (Input.GetKeyDown("q"))
+        if (Input.GetKeyDown("q") || Input.GetKeyDown("e"))
         {
             if (grav_on && gravity_power)
             {

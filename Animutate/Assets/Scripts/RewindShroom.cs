@@ -93,7 +93,7 @@ public class RewindShroom : MonoBehaviour
             //Debug.Log(power_up_time);
             //Debug.Log(myQueue.Dequeue());
 
-            if (Input.GetKeyDown("q"))
+            if (Input.GetKeyDown("q") || Input.GetKeyDown("e"))
         {
             player.position = rewind_pos;
             //Debug.Log("tele");

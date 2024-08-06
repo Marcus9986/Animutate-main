@@ -18,7 +18,7 @@ public class tele2 : MonoBehaviour
     {
         if (Input.GetKeyDown("6"))
         {
-            p.position = new Vector3(9,34,0);
+            p.position = new Vector3(5,30,0);
         }
         if (Input.GetKeyDown("7"))
         {
